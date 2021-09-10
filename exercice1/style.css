@@ -1,0 +1,88 @@
+body
+{
+    margin: 0 7.5vw;
+    width: 85vw;
+    background: #2c2c2c;
+    color: #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1
+{
+    text-align: center;
+    width: 100%;
+}
+
+h1 + p
+{
+    letter-spacing: 0.5rem;
+    line-height: 3rem;
+    margin-top: 0;
+}
+
+img
+{
+    width: 30%;
+    margin: 1rem 35%;
+}
+
+p span:nth-child(1)
+{
+    color: aqua;
+}
+
+p span:nth-child(2)
+{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+p span:nth-child(3)
+{
+    font-weight: bold;
+    text-decoration: line-through;
+}
+
+p span:nth-child(4)
+{
+    color: red;
+}
+
+p span:nth-child(5)
+{
+    color: greenyellow;
+}
+
+h1 + p + p
+{
+    font-size: 1.5rem;
+    margin: 4rem 0;
+    width: 100%;
+    text-align: center;
+}
+
+h1 + p + p + p
+{
+    color: rgb(238, 255, 0);
+    padding-bottom: 2rem;
+}
+
+h1 + p + p + p + p
+{
+    color: aqua;
+    padding-bottom: 2rem;
+}
+
+h1 + p + p + p + p + p
+{
+    color: aqua;
+    padding-bottom: 5rem;
+}
+
+@media all and (min-width: 1024px) and (max-width: 2560px){
+    h1 + p + p + p
+    {
+        width: 100%;
+        text-align: center;
+    }
+}
