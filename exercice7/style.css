@@ -1,0 +1,107 @@
+body
+{
+    background: #2c2c2c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: gold;
+}
+
+section
+{
+    width: 80%;
+    height: 80%;
+    border: 2px solid gold;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1
+{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+h1 + p
+{
+    font-size: 1rem;
+    margin-top: 5%;
+    text-align: center;
+}
+
+button
+{
+    width: 10rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+    font-weight: 900;
+    margin-top: 5%;
+    background: gold;
+    border: none;
+    border-radius: 1rem;
+    color: #2c2c2c;
+}
+
+input
+{
+    width: 8rem;
+    height: 2.5rem;
+    border: 2px solid gold;
+    border-radius: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    background: none;
+    color: #ffffff;
+}
+
+button + p
+{
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-top: 7%;
+}
+
+
+
+@media all and (min-width: 1024px) and (max-width: 2560px){
+
+    h1
+    {
+        font-size: 3rem;
+    }
+
+    h1 + p
+    {
+        font-size: 1.5rem;
+    }
+
+    button + p
+    {
+        font-size: 2rem;
+    }
+
+    input
+    {
+        width: 10rem;
+        height: 3.5rem;
+        font-size: 3rem;
+    }
+
+    button
+    {
+        width: 15rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+        margin-top: 1%;
+    }
+}
