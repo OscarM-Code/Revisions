@@ -1,0 +1,6 @@
+body section:nth-child(3) div
+{
+    width: 7rem;
+    height: 7rem;
+    background: RGB(116, 208, 241);
+}
