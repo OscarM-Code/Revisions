@@ -11,6 +11,7 @@ body
 
 button
 {
+    display: none;
     width: 10rem;
     height: 3rem;
     font-size: 2rem;
@@ -25,18 +26,19 @@ button
 button:hover
 {
     scale: 1.2;
+    cursor: pointer;
 }
 
 @keyframes b {
-    0% {border: 2px solid red; color: red;}
-    10% {border: 2px solid greenyellow; color: greenyellow;}
-    20% {border: 2px solid purple; color: purple;}
-    30% {border: 2px solid blue; color: blue;}
-    40% {border: 2px solid orange; color: orange;}
-    50% {border: 2px solid black; color: black;}
-    60% {border: 2px solid pink; color: pink;}
-    70% {border: 2px solid brown; color: brown;}
-    80% {border: 2px solid white; color: white;}
-    90% {border: 2px solid gray; color: gray;}
-    100% {border: 2px solid yellow; color: yellow;}
+    0% {border: 3px solid red; color: red;}
+    10% {border: 3px solid greenyellow; color: greenyellow;}
+    30% {border: 3px solid purple; color: purple;}
+    30% {border: 3px solid blue; color: blue;}
+    40% {border: 3px solid orange; color: orange;}
+    50% {border: 3px solid black; color: black;}
+    60% {border: 3px solid pink; color: pink;}
+    70% {border: 3px solid brown; color: brown;}
+    80% {border: 3px solid white; color: white;}
+    90% {border: 3px solid gray; color: gray;}
+    100% {border: 3px solid yellow; color: yellow;}
 }
