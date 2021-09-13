@@ -36,6 +36,4 @@ toto.addEventListener("click", () => {
         alert(`Il faut attendre encore ${x} jours`);
         console.log(x);
     }
-    // alert("alert - Hello, " + name + "! You can't enter text here!");
-
 })
