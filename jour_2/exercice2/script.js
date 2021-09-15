@@ -8,36 +8,28 @@ let newArray = [];
 
 if(localStorage.getItem("nameArray") != null){
     window.addEventListener("load",  function(){
-        console.log(localStorage.getItem("nameArray").split(","));
         if (localStorage.getItem("nameArray").split(",")[0] != "") {
             nameArray = localStorage.getItem("nameArray").split(",");
-        }
-
-        if (localStorage.getItem("newArray") != null) {
-            newArray = localStorage.getItem("newArray").split(",");
-        }
-        let i = 0;
-        let j = 0;
-        console.log(nameArray.length);
-        while(i < nameArray.length){
-            if(newArray.length != 1){
+            let i = 0;
+            while(i < nameArray.length){
                 let newP = document.createElement("p");
                 newP.textContent = nameArray[i];
                 newP.id = nameArray[i];
-                console.log(newP);
                 names.appendChild(newP);
                 i++;
             }
         }
-
-        while(j < newArray.length){
-            let newP = document.createElement("p");
-            newP.textContent = newArray[j];
-            newP.id = newArray[j];
-            newNames.appendChild(newP);
-            j++;
+        if (localStorage.getItem("newArray") != null) {
+            newArray = localStorage.getItem("newArray").split(",");
+            let j = 0;
+            while(j < newArray.length){
+                let newP = document.createElement("p");
+                newP.textContent = newArray[j];
+                newP.id = newArray[j];
+                newNames.appendChild(newP);
+                j++;
+            }
         }
-
     })
 }
 
@@ -48,7 +40,6 @@ btn_1.addEventListener("click", () => {
     newName.id = getName;
     nameArray.push(getName);
     names.appendChild(newName);
-    console.log(nameArray);
     localStorage.setItem("nameArray", nameArray);
 })
 
@@ -56,14 +47,12 @@ btn_2.addEventListener("click", () => {
     let rdm = Math.floor(Math.random() * nameArray.length);
     let rdmName = nameArray[rdm];
     let newName = document.createElement("p");
-    console.log(rdm);
     let nameSelect = document.getElementById(rdmName);
     newName.textContent = rdmName;
     newNames.appendChild(newName);
     names.removeChild(nameSelect);
     newArray.push(rdmName);
     nameArray.splice(rdm, 1);
-    console.log(nameArray);
     localStorage.setItem("nameArray", nameArray);
     localStorage.setItem("newArray", newArray);
 })
