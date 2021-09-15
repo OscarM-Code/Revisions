@@ -8,8 +8,14 @@ let newArray = [];
 
 if(localStorage.getItem("nameArray") != null){
     window.addEventListener("load",  function(){
-        nameArray = localStorage.getItem("nameArray").split(",");
-        newArray = localStorage.getItem("newArray").split(",");
+        console.log(localStorage.getItem("nameArray").split(","));
+        if (localStorage.getItem("nameArray").split(",")[0] != "") {
+            nameArray = localStorage.getItem("nameArray").split(",");
+        }
+
+        if (localStorage.getItem("newArray") != null) {
+            newArray = localStorage.getItem("newArray").split(",");
+        }
         let i = 0;
         let j = 0;
         console.log(nameArray.length);
