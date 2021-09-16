@@ -1,12 +1,13 @@
 let seeBtn = document.querySelector("section:nth-child(1) button");
 
-seeBtn.addEventListener("click", () => {
+seeBtn.addEventListener("click", async() => {
     const url = "see.php";
     const options = {
         method: "POST"
     }
 
-    fetch(url, options)
-        .then(function(response))
-    console.log(options);
+    const response = await fetch(url, options);
+    // const user = await response.json();
+    
+    console.log(response);
 })
