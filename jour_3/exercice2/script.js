@@ -8,6 +8,7 @@ let name;
 let firstName;
 let gender;
 let astroSign;
+let id;
 
 seeBtn.addEventListener("click", () => {
   valueBtn = seeBtn.value;
@@ -29,7 +30,7 @@ valideForm.addEventListener("submit", (ev) => {
 })
 
 async function loadData() {
-  const json = { value: `${valueBtn}`, name: `${name}`, firstName: `${firstName}`, gender: `${gender}`, astroSign: `${astroSign}` };
+  const json = { value: `${valueBtn}`, id: ``, name: `${name}`, firstName: `${firstName}`, gender: `${gender}`, astroSign: `${astroSign}` };
   const header = {
     "Content-Type": "application/json",
   };
@@ -40,8 +41,29 @@ async function loadData() {
     body: JSON.stringify(json),
   });
   const user = await response.text();
-
+  
   if(valueBtn == "see"){
     artSee.innerHTML = user;
+    const deletBtn = document.querySelectorAll("article button");
+    deletBtn.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        id = e.currentTarget.getAttribute("value");
+        console.log(id);
+      })
+    })
   }
+}
+
+async function deleteData(){
+  const json = { id: `${id}` };
+  const header = {
+    "Content-Type": "application/json",
+  };
+  const response = await fetch("action.php", {
+    method: "POST",
+    header: header,
+    body: JSON.stringify(json),
+  });
+  const user = await response.text();
+  artSee.innerHTML = user;
 }

@@ -28,12 +28,15 @@ if($obj["value"] == "see"){
     foreach($list as $getList):
     ?>
     
-    <div>
-        <p>Name: <?php echo $getList["name"] ?></p>
-        <p>First name: <?php echo $getList["first_name"] ?></p>
-        <p>gender: <?php echo $getList["gender"] ?></p>
-        <p>First name: <?php echo $getList["astro_sign"] ?></p>
-    </div>
+    <section>
+        <div>
+            <p>Name: <?php echo $getList["name"] ?></p>
+            <p>First name: <?php echo $getList["first_name"] ?></p>
+            <p>gender: <?php echo $getList["gender"] ?></p>
+            <p>First name: <?php echo $getList["astro_sign"] ?></p>
+        </div>
+        <button value="<?php echo $getList["ID"] ?>" >Delete -</button>
+    </section>
     
     <?php
     endforeach;
