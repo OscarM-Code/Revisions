@@ -45,6 +45,6 @@
         <button>Validate</button>
     </form>
     
-    <script src="script.js"></script>
+    <script src="scrip.js"></script>
 </body>
 </html>
